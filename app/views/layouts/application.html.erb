@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WoTcs</title>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="navbar home">
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li><a href="#">Clans</a></li>
+      <li><a href="#">Statistics</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">FAQ &amp; Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid home">
+  <div class="main-logo text-center">
+    <%= image_tag 'logo.png' %>
+  </div>
+  <h1 class="text-center">A simple tool, which will show you battle potential of your enemy</h1>
+
+  <form class="form-search text-center" action="/" method="get">
+    <%= hidden_field_tag 'region' %>
+    <span class="dropdown btn">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <span class="value">EU</span>
+        <span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+        <li><a href="#" href="">NA</a></li>
+        <li><a href="#" href="">RU</a></li>
+        <li><a href="#" href="">SEA</a></li>
+        <li><a href="#" href="">KR</a></li>
+      </ul>
+    </span><%= text_field_tag 'name' %><button class="btn">&nbsp;<i class="icon-search icon-white"></i>&nbsp;</button>
+  </form>
+  <div class="row-fluid text-center">
+    <div class="span4">
+      <h2><%= link_to 'Top clans', '#' %></h2>
+      <table class="table">
+        <tbody>
+        <tr>
+          <td class="clan-name">
+            <%= link_to '#' do %>
+                <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_32x32.png' %> PTS
+            <% end  %>
+          </td>
+          <td class="clan-score">
+            <%= link_to '#' do %>
+                2767k
+            <% end  %>
+          </td>
+        </tr>
+        <tr>
+          <td class="clan-name">
+            <%= link_to '#' do %>
+                <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_32x32.png' %> PTS
+            <% end  %>
+          </td>
+          <td class="clan-score">
+            <%= link_to '#' do %>
+                2767k
+            <% end  %>
+          </td>
+        </tr>
+        <tr>
+          <td class="clan-name">
+            <%= link_to '#' do %>
+                <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_32x32.png' %> PTS
+            <% end  %>
+          </td>
+          <td class="clan-score">
+            <%= link_to '#' do %>
+                2767k
+            <% end  %>
+          </td>
+        </tr>
+        <tr>
+          <td class="clan-name">
+            <%= link_to '#' do %>
+                <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_32x32.png' %> PTS
+            <% end  %>
+          </td>
+          <td class="clan-score">
+            <%= link_to '#' do %>
+                2767k
+            <% end  %>
+          </td>
+        </tr>
+        <tr>
+          <td class="clan-name">
+            <%= link_to '#' do %>
+                <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_32x32.png' %> PTS
+            <% end  %>
+          </td>
+          <td class="clan-score">
+            <%= link_to '#' do %>
+                2767k
+            <% end  %>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+      <%= link_to 'View more', '#' %>
+    </div>
+    <div class="span4">
+      <h2><%= link_to 'Game stats', '#' %></h2>
+      <table class="table">
+        <tbody>
+        <tr>
+          <td class="stat-name"><%= link_to '#' do %>
+            WIN
+          <% end  %></td>
+          <td class="stat-score"><%= link_to '#' do %>
+            49.11 %
+          <% end  %></td>
+        </tr>
+        <tr>
+          <td class="stat-name"><%= link_to '#' do %>
+                FRG
+            <% end  %></td>
+          <td class="stat-score"><%= link_to '#' do %>
+                0.72
+            <% end  %></td>
+        </tr>
+        <tr>
+          <td class="stat-name"><%= link_to '#' do %>
+                K/D
+            <% end  %></td>
+          <td class="stat-score"><%= link_to '#' do %>
+                1.01
+            <% end  %></td>
+        </tr>
+        <tr>
+          <td class="stat-name"><%= link_to '#' do %>
+                DMG
+            <% end  %></td>
+          <td class="stat-score"><%= link_to '#' do %>
+                559.31
+            <% end  %></td>
+        </tr>
+        <tr>
+          <td class="stat-name"><%= link_to '#' do %>
+                WN7
+            <% end  %></td>
+          <td class="stat-score"><%= link_to '#' do %>
+                832.91
+            <% end  %></td>
+        </tr>
+        </tbody>
+      </table>
+      <%= link_to 'View more', '#' %>
+    </div>
+    <div class="span4">
+      <h2><%= link_to 'Server stats', '#' %></h2>
+      <table class="table">
+        <tbody>
+        <tr>
+          <td class="server-stat-name">
+            Clans updated &lt; 1 hour
+          </td>
+          <td class="server-stat-score">
+            18000
+          </td>
+        </tr>
+        <tr>
+          <td class="server-stat-name">
+            # Clans tracked
+          </td>
+          <td class="server-stat-score">
+            18000
+          </td>
+        </tr>
+        <tr>
+          <td class="server-stat-name">
+            Players updated &lt; 1 hour
+          </td>
+          <td class="server-stat-score">
+            10000
+          </td>
+        </tr>
+        <tr>
+          <td class="server-stat-name">
+            Players updated &lt; 12 hours
+          </td>
+          <td class="server-stat-score">
+            100000
+          </td>
+        </tr>
+        <tr>
+          <td class="server-stat-name">
+            # Players tracked
+          </td>
+          <td class="server-stat-score">
+            600000
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+</div>
+
+<%= yield %>
+
+</body>
+</html>

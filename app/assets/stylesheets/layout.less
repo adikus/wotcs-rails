@@ -1,0 +1,51 @@
+@import 'config';
+
+body {
+  font-family: Oswald, sans-serif;
+  background: @background-color;
+  color: @content-color;
+}
+
+.navbar {
+  margin-bottom: 30px;
+  .navbar-inner {
+    border: none;
+    background: @content-background;
+    border-radius: 0;
+    .nav {
+      font-size: 30px;
+      a, .active a, a:hover, a:focus{
+        color: @content-color;
+        line-height: 45px;
+        text-shadow: none;
+        box-shadow: none;
+        outline: none;
+        transition: background 0.5s, color 0.5s;
+      }
+      .active a, a:hover{
+        color: @content-color-highlight;
+        background: @content-background-highlight;
+      }
+    }
+  }
+}
+
+.container, .container-fluid {
+  background: @content-background;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+a {
+  color: @content-color-highlight;
+  transition: color 0.5s;
+}
+a:hover {
+  text-decoration: none;
+  color: @content-color;
+}
