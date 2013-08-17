@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WoTcs</title>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrap">
+    <div class="navbar home">
+      <div class="navbar-inner">
+        <ul class="nav">
+          <li><a href="#">Clans</a></li>
+          <li><a href="#">Statistics</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ &amp; Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+  <div class="container-fluid home">
+    <%= yield %>
+  </div>
+
+  <div id="push"></div>
+</div>
+
+<div id="footer">
+  WoT clan statistics by adikus | 2012
+</div>
+
+</body>
+</html>

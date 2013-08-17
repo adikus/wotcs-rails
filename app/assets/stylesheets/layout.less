@@ -30,6 +30,23 @@ body {
   }
 }
 
+#wrap {
+  height: auto !important;
+  margin: 0 auto -40px;
+  min-height: 100%;
+}
+
+#push {
+  height: 70px;
+}
+
+#footer {
+  text-align: center;
+  padding: 10px 0;
+  height: 20px;
+  background: @content-background;
+}
+
 .container, .container-fluid {
   background: @content-background;
   max-width: 1280px;
@@ -39,6 +56,7 @@ body {
 a:focus {
   outline: none;
   text-decoration: none;
+  color: @content-color-highlight;
 }
 
 a {
