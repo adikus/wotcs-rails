@@ -1,0 +1,17 @@
+<h1>Top clans</h1>
+
+<div class="row-fluid">
+  <div class="span6">
+    <% i = 1 %>
+    <% 10.times do %>
+      <%= render 'clan', i: i %>
+      <% i += 1  %>
+    <% end %>
+  </div>
+  <div class="span6">
+    <% 10.times do %>
+        <%= render 'clan', i: i %>
+        <% i += 1  %>
+    <% end %>
+  </div>
+</div>

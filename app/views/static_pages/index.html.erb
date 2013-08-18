@@ -3,10 +3,10 @@
 </div>
 <h1 class="text-center">A simple tool, which will show you battle potential of your enemy</h1>
 
-<form class="form-search text-center" action="/" method="get">
+<form class="form-search text-center" action="<%= search_path %>" method="get">
   <%= hidden_field_tag 'region' %>
-  <span class="dropdown btn">
-      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+  <span class="dropdown">
+      <a class="dropdown-toggle btn" data-toggle="dropdown" href="#">
         <span class="value">EU</span>
         <span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -15,11 +15,11 @@
         <li><a href="#" href="">SEA</a></li>
         <li><a href="#" href="">KR</a></li>
       </ul>
-    </span><%= text_field_tag 'name' %><button class="btn">&nbsp;<i class="icon-search icon-white"></i>&nbsp;</button>
+    </span><%= text_field_tag 'name', '', placeholder: 'Search'  %><button class="btn">&nbsp;<i class="icon-search icon-white"></i>&nbsp;</button>
 </form>
 <div class="row-fluid text-center">
   <div class="span4">
-    <h2><%= link_to 'Top clans', '#' %></h2>
+    <h2><%= link_to 'Top clans', clans_path %></h2>
     <table class="table">
       <tbody>
       <tr>

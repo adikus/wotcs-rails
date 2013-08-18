@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WoTcs</title>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="wrap">
+    <div class="navbar">
+      <div class="navbar-inner text-center">
+        <ul class="nav">
+          <li class="nav-push">&nbsp</li>
+          <li><%= link_to 'Clans', clans_path %></li>
+          <li><a href="#">Statistics</a></li>
+        </ul>
+        <div class="nav-middle">
+          <%= link_to root_path do %>
+            <% image_tag 'logo-small.png' %>
+          <% end %>
+          <form class="form-search text-center" action="<%= search_path %>" method="get">
+            <%= hidden_field_tag 'region' %>
+            <span class="dropdown">
+              <a class="dropdown-toggle btn" data-toggle="dropdown" href="#">
+                <span class="value">EU</span> <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><a href="#" href="">NA</a></li>
+                <li><a href="#" href="">RU</a></li>
+                <li><a href="#" href="">SEA</a></li>
+                <li><a href="#" href="">KR</a></li>
+              </ul>
+            </span><%= text_field_tag 'name', '', placeholder: 'Search' %><button class="btn">&nbsp;<i class="icon-search icon-white"></i>&nbsp;</button>
+          </form>
+        </div>
+        <ul class="nav">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ &amp; Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+  <div class="container-fluid">
+    <%= yield %>
+  </div>
+
+  <div id="push"></div>
+</div>
+
+<div id="footer">
+  WoT clan statistics by adikus | 2012
+</div>
+
+</body>
+</html>

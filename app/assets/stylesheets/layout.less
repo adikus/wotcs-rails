@@ -11,9 +11,20 @@ body {
   .navbar-inner {
     border: none;
     background: @content-background;
+    background-image: image-url('double-line.png');
+    background-repeat: repeat-x;
+    background-position: 0 27px;
     border-radius: 0;
     .nav {
+      display: inline-block;
+      float: none;
       font-size: 30px;
+      vertical-align: bottom;
+      margin: 0;
+      .nav-push{
+        display: block;
+        width: 39px;
+      }
       a, .active a, a:hover, a:focus{
         color: @content-color;
         line-height: 45px;
@@ -27,7 +38,39 @@ body {
         background: @content-background-highlight;
       }
     }
+    .nav-middle {
+      display: inline-block;
+      background: @content-background;
+      width: 275px;
+      img {
+        margin-bottom: 10px;
+      }
+      form {
+        display: inline-block;
+        margin-bottom: 3px;
+        input {
+          width: 161px;
+        }
+        .btn {
+          margin-top: 0;
+        }
+        a.btn {
+          height: 26px;
+          line-height: 26px;
+          .caret {
+            margin-top: 12px;
+          }
+        }
+        button.btn {
+          height: 34px;
+        }
+      }
+    }
   }
+}
+
+html, body {
+  height: 100%;
 }
 
 #wrap {
@@ -53,17 +96,99 @@ body {
   margin: 0 auto;
 }
 
-a:focus {
-  outline: none;
-  text-decoration: none;
-  color: @content-color-highlight;
-}
-
 a {
   color: @content-color-highlight;
   transition: color 0.5s;
+  &:hover {
+    text-decoration: none;
+    color: @content-color;
+  }
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    color: @content-color-highlight;
+  }
 }
-a:hover {
-  text-decoration: none;
+
+.btn {
+  background: @content-background;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
   color: @content-color;
+  font-family: inherit;
+  transition: color 0.5s, background-color 0.5s;
+  &:hover, &:focus {
+    text-decoration: none;
+    background: @content-background-highlight;
+    color: @content-color-highlight;
+    transition: color 0.5s, background-color 0.5s;
+  }
+}
+
+.dropdown {
+  display: inline-block;
+  &:hover, &.open {
+    .btn {
+      text-decoration: none;
+      background: @content-background-highlight;
+    }
+    a {
+      color: @content-color-highlight;
+      text-decoration: none;
+    }
+  }
+  a {
+    color: @content-color;
+    &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+  }
+  .dropdown-toggle{
+    .caret {
+      border-top-color: @content-color;
+    }
+  }
+  .dropdown-menu {
+    min-width: 100px;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    background: @content-background-highlight;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    a{
+      transition: color 0.5s, background 0.5s;
+    }
+    a:hover {
+      background: @content-background;
+      color: @content-color;
+    }
+  }
+}
+
+input[type="text"] {
+  border-radius: 0;
+  border: 3px solid #FFF;
+  transition: border-color 1s;
+  &:focus {
+    box-shadow: none;
+    border-color: @content-color;
+  }
+}
+
+h1, h2, h3, h4, h5{
+  text-align: center;
+}
+
+.link-block {
+  display: block;
+  padding: 10px 0;
+  transition: background-color .5s;
+  &:hover{
+    background: @content-background-highlight;
+  }
 }

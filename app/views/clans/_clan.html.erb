@@ -1,0 +1,28 @@
+<%= link_to '#', class: 'link-block clan-element' do %>
+  <div class="row-fluid">
+    <div class="span1 text-right">
+      <span class="clan-position"><%= i %></span>
+    </div>
+    <div class="span2 clan-emblem">
+      <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_64x64.png' %>
+    </div>
+    <div class="span3">
+      <div class="clan-tag">PTS</div>
+      <div class="clan-name">Pirates</div>
+    </div>
+    <div class="span1 text-right">
+      <div class="clan-stat-name stat-rank-<%= Random.rand(6)+10 %>">WIN:</div>
+      <div class="clan-stat-name stat-rank-<%= Random.rand(6)+10 %>">SC3:</div>
+    </div>
+    <div class="span2">
+      <div class="clan-stat-value stat-rank-<%= Random.rand(6)+1 %>">62.00 %</div>
+      <div class="clan-stat-value stat-rank-<%= Random.rand(6)+1 %>">2000 k</div>
+    </div>
+    <div class="span1 text-right">
+      <div class="clan-stat-name stat-rank-<%= Random.rand(6)+10 %>">EFR:</div>
+      <div class="clan-stat-name stat-rank-<%= Random.rand(6)+10 %>">WN7:</div></div>
+    <div class="span2">
+      <div class="clan-stat-value stat-rank-<%= Random.rand(6)+1 %>">170 k</div>
+      <div class="clan-stat-value stat-rank-<%= Random.rand(6)+1 %>">180 k</div></div>
+  </div>
+<% end  %>
