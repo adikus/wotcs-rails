@@ -1,0 +1,8 @@
+<%= link_to '#', class: 'home-stat-elem text-left' do %>
+    <span class="home-stat-name" title="<%= stat[:desc] %>">
+        <%= stat[:name] %>
+    </span>
+    <span class="pull-right home-stat-score">
+        <%= stat[:value] %>
+    </span>
+<% end  %>

@@ -47,6 +47,42 @@
     }
   }
 
+  a.view-more {
+    line-height: 2;
+  }
+
+  .top-clan-elem, .home-stat-elem, .server-stat-elem {
+    width: 150px;
+    display: inline-block;
+    color: @content-color;
+    padding: 2px 25px 3px;
+    line-height: 32px;
+    height: 32px;
+    transition: color 0.5s, background 0.5s;
+    &.server-stat-elem {
+      width: 200px;
+    }
+    &.top-clan-elem:hover, &.home-stat-elem:hover {
+      color: @content-color-highlight;
+      background: @content-background-highlight;
+      text-decoration: none;
+    }
+    img {
+      vertical-align: top;
+    }
+    .top-clan-name, .home-stat-name {
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .home-stat-name {
+      border-bottom: 1px dashed @content-color;
+    }
+    .top-clan-score, .home-stat-score, .server-stat-score {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
   .table{
     margin-bottom: 5px;
     td {

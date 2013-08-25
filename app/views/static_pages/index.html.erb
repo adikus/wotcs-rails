@@ -17,175 +17,33 @@
       </ul>
     </span><%= text_field_tag 'name', '', placeholder: 'Search'  %><button class="btn">&nbsp;<i class="icon-search icon-white"></i>&nbsp;</button>
 </form>
+
 <div class="row-fluid text-center">
   <div class="span4">
     <h2><%= link_to 'Top clans', clans_path %></h2>
-    <table class="table">
-      <tbody>
-      <tr>
-        <td class="clan-name">
-          <%= link_to '#' do %>
-              <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_32x32.png' %> PTS
-          <% end  %>
-        </td>
-        <td class="clan-score">
-          <%= link_to '#' do %>
-              2767k
-          <% end  %>
-        </td>
-      </tr>
-      <tr>
-        <td class="clan-name">
-          <%= link_to '#' do %>
-              <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_32x32.png' %> PTS
-          <% end  %>
-        </td>
-        <td class="clan-score">
-          <%= link_to '#' do %>
-              2767k
-          <% end  %>
-        </td>
-      </tr>
-      <tr>
-        <td class="clan-name">
-          <%= link_to '#' do %>
-              <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_32x32.png' %> PTS
-          <% end  %>
-        </td>
-        <td class="clan-score">
-          <%= link_to '#' do %>
-              2767k
-          <% end  %>
-        </td>
-      </tr>
-      <tr>
-        <td class="clan-name">
-          <%= link_to '#' do %>
-              <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_32x32.png' %> PTS
-          <% end  %>
-        </td>
-        <td class="clan-score">
-          <%= link_to '#' do %>
-              2767k
-          <% end  %>
-        </td>
-      </tr>
-      <tr>
-        <td class="clan-name">
-          <%= link_to '#' do %>
-              <%= image_tag 'http://cw.worldoftanks.eu/media/clans/emblems/clans_5/500000010/emblem_32x32.png' %> PTS
-          <% end  %>
-        </td>
-        <td class="clan-score">
-          <%= link_to '#' do %>
-              2767k
-          <% end  %>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-    <%= link_to 'View more', '#' %>
+    <%= render partial: 'clan', collection: ['PTS']*5 %>
+    <br><%= link_to 'View more',clans_path, class: 'view-more' %>
   </div>
   <div class="span4">
     <h2><%= link_to 'Game stats', '#' %></h2>
-    <table class="table">
-      <tbody>
-      <tr>
-        <td class="stat-name"><%= link_to '#', title: "Win ratio. Percentage of won games." do %>
-              WIN<sup><small>?</small></sup>
-          <% end  %></td>
-        <td class="stat-score"><%= link_to '#' do %>
-              49.11 %
-          <% end  %></td>
-      </tr>
-      <tr>
-        <td class="stat-name"><%= link_to '#', title: "Frags. Number of tanks destroyed per battled on average." do %>
-              FRG<sup><small>?</small></sup>
-          <% end  %></td>
-        <td class="stat-score"><%= link_to '#' do %>
-              0.72
-          <% end  %></td>
-      </tr>
-      <tr>
-        <td class="stat-name"><%= link_to '#', title: "Ratio of kills to deaths." do %>
-              K/D<sup><small>?</small></sup>
-          <% end  %></td>
-        <td class="stat-score"><%= link_to '#' do %>
-              1.01
-          <% end  %></td>
-      </tr>
-      <tr>
-        <td class="stat-name"><%= link_to '#', title: "Damage dealt per battle on average." do %>
-              DMG<sup><small>?</small></sup>
-          <% end  %></td>
-        <td class="stat-score"><%= link_to '#' do %>
-              559.31
-          <% end  %></td>
-      </tr>
-      <tr>
-        <td class="stat-name"><%= link_to '#', title: "Similar to efficiency, WN7 is rating which takes into account all aspects of your play style." do %>
-              WN7<sup><small>?</small></sup>
-          <% end  %></td>
-        <td class="stat-score"><%= link_to '#' do %>
-              832.91
-          <% end  %></td>
-      </tr>
-      </tbody>
-    </table>
-    <%= link_to 'View more', '#' %>
+    <%= render partial: 'stat', collection:
+        [{name: 'WIN', value: '49.11%', desc: 'Win ratio. Percentage of won games.'},
+         {name: 'FRG', value: '0.75', desc: 'Frags. Number of tanks destroyed per battled on average.'},
+         {name: 'K/D', value: '1.01', desc: 'Ratio of kills to deaths.'},
+         {name: 'DMG', value: '559.31', desc: 'Damage dealt per battle on average.'},
+         {name: 'WN7', value: '832.91', desc: 'Similar to efficiency, WN7 is rating which takes into account all aspects of your play style.'}] %>
+    <br><%= link_to 'View more','#', class: 'view-more' %>
   </div>
   <div class="span4">
     <h2><%= link_to 'Server stats', '#' %></h2>
-    <table class="table">
-      <tbody>
-      <tr>
-        <td class="server-stat-name">
-          Clans updated &lt; 1 hour
-        </td>
-        <td class="server-stat-score">
-          18000
-        </td>
-      </tr>
-      <tr>
-        <td class="server-stat-name">
-          # Clans tracked
-        </td>
-        <td class="server-stat-score">
-          18000
-        </td>
-      </tr>
-      <tr>
-        <td class="server-stat-name">
-          Players updated &lt; 1 hour
-        </td>
-        <td class="server-stat-score">
-          10000
-        </td>
-      </tr>
-      <tr>
-        <td class="server-stat-name">
-          Players updated &lt; 12 hours
-        </td>
-        <td class="server-stat-score">
-          100000
-        </td>
-      </tr>
-      <tr>
-        <td class="server-stat-name">
-          # Players tracked
-        </td>
-        <td class="server-stat-score">
-          600000
-        </td>
-      </tr>
-      </tbody>
-    </table>
+    <%= render partial: 'server_stat', collection: [{name: 'Clans updated < 1 hour', value: '49.11%'},{name: '# Clans tracked', value: '0.75'},\
+    {name: 'Players updated < 1 hour', value: '1.01'}, {name: 'Players updated < 12 hours', value: '559.31'},{name: '# Players tracked', value: '832.91'}] %>
+    <br><%= link_to 'View more','#', class: 'view-more' %>
   </div>
 </div>
-<br>
 
 <script>
   $(function(){
-      $('.stat-name a').tooltip();
+      $('.home-stat-name').tooltip();
   });
 </script>
