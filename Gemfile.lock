@@ -123,7 +123,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   less-rails
-  less-rails-bootstrap
+  less-rails-bootstrap (= 2.3.3)
   pg
   rails (= 4.0.0)
   sdoc

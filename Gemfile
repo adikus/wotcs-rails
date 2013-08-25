@@ -18,7 +18,7 @@ group :assets do
 end
 
 # Bootstrap
-gem 'less-rails-bootstrap'
+gem 'less-rails-bootstrap', '2.3.3'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
