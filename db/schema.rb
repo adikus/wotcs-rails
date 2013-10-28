@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131026170309) do
+ActiveRecord::Schema.define(version: 20131028174814) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(version: 20131026170309) do
     t.string   "motto"
     t.string   "name"
     t.string   "tag"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "players", force: true do |t|
+    t.string   "name"
+    t.integer  "clan_id_id", limit: 8
     t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
