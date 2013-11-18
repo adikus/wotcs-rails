@@ -48,18 +48,18 @@ a {
 
 .btn {
   background: @content-background;
-  border-color: @content-background;
+  border-color: @content-background-highlight;
   box-shadow: none;
   text-shadow: none;
   color: @content-color;
   font-family: inherit;
-  transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+  transition: color 0.5s, background-color 0.5s;
   &:hover, &:focus {
     text-decoration: none;
     background: @content-background-highlight;
     border-color: @content-background-highlight;
     color: @content-color-highlight;
-    transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+    transition: color 0.5s, background-color 0.5s;
   }
 }
 
@@ -114,6 +114,9 @@ h1, h2, h3, h4, h5{
   font-family: inherit;
 }
 
+.text-center th{
+  text-align: center;
+}
 .table{
   thead > tr > th, tbody > tr > th, tfoot > tr > th, thead > tr > td, tbody > tr > td, tfoot > tr > td {
     border-color: lighten(@background-color, 15%);
@@ -121,6 +124,23 @@ h1, h2, h3, h4, h5{
   &.table-striped {
      tbody > tr:nth-child(2n+1) > td, tbody > tr:nth-child(2n+1) > th {
       background-color: lighten(@background-color, 5%);
+    }
+  }
+}
+
+.pagination {
+  margin: 20px auto;
+  display: inline-block;
+  & > li > a, & > li.disabled > a, & > li > span, & > li.disabled > span {
+    background: @content-background;
+    border-color: @content-background-highlight;
+    transition: background-color 0.5s;
+    &:hover, &:focus {
+      text-decoration: none;
+      background: @content-background-highlight;
+      border-color: @content-background-highlight;
+      color: @content-color-highlight;
+      transition: background-color 0.5s;
     }
   }
 }

@@ -1,7 +1,7 @@
 class ClansController < ApplicationController
 
   def index
-    @clans = Clan.in_region(1).order(tag: :asc).limit(40)
+    @clans = Clan.in_region(1).order(tag: :asc).page(params[:page])
   end
 
   def show
