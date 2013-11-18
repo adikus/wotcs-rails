@@ -1,7 +1,7 @@
-class Clan < ActiveRecord::Base
-  default_scope { where('status > 0') }
+class Player < ActiveRecord::Base
+  default_scope { where('status > -1') }
 
-  has_many :players
+  belongs_to :clan
 
   scope :in_region, ->(region) do
     if region == 0
@@ -26,10 +26,6 @@ class Clan < ActiveRecord::Base
     return 'worldoftanks.com' if id > 1000000000
     return 'worldoftanks.eu' if id > 500000000
     return 'worldoftanks.ru'
-  end
-
-  def emblem
-    "http://clans.#{self.domain}/media/clans/emblems/clans_#{self.id.to_s[0]}/#{self.id}/emblem_32x32.png"
   end
 
 end

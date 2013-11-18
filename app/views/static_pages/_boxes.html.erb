@@ -1,0 +1,23 @@
+<div class="row-fluid text-center">
+  <div class="span4">
+    <h2><%= link_to 'Top clans', clans_path %></h2>
+    <%= render partial: 'clan', collection: ['PTS']*5 %>
+    <br><%= link_to 'View more',clans_path, class: 'view-more' %>
+  </div>
+  <div class="span4">
+    <h2><%= link_to 'Game stats', '#' %></h2>
+    <%= render partial: 'stat', collection:
+            [{name: 'WIN', value: '49.11%', desc: 'Win ratio. Percentage of won games.'},
+             {name: 'FRG', value: '0.75', desc: 'Frags. Number of tanks destroyed per battled on average.'},
+             {name: 'K/D', value: '1.01', desc: 'Ratio of kills to deaths.'},
+             {name: 'DMG', value: '559.31', desc: 'Damage dealt per battle on average.'},
+             {name: 'WN7', value: '832.91', desc: 'Similar to efficiency, WN7 is rating which takes into account all aspects of your play style.'}] %>
+    <br><%= link_to 'View more','#', class: 'view-more' %>
+  </div>
+  <div class="span4">
+    <h2><%= link_to 'Server stats', '#' %></h2>
+    <%= render partial: 'server_stat', collection: [{name: 'Clans updated < 1 hour', value: '49.11%'},{name: '# Clans tracked', value: '0.75'},\
+    {name: 'Players updated < 1 hour', value: '1.01'}, {name: 'Players updated < 12 hours', value: '559.31'},{name: '# Players tracked', value: '832.91'}] %>
+    <br><%= link_to 'View more','#', class: 'view-more' %>
+  </div>
+</div>

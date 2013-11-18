@@ -1,17 +1,23 @@
 <h1>Top clans</h1>
 
-<div class="row-fluid">
-  <div class="span6">
-    <% i = 1 %>
-    <% 10.times do %>
-      <%= render 'clan', i: i %>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Emblem</th>
+    <th>Tag</th>
+    <th>Name</th>
+    <th>WR</th>
+    <th>SC3</th>
+    <th>WN7</th>
+    <th>EFR</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% i = 1 %>
+  <% @clans.each do |clan| %>
+      <%= render clan, i: i %>
       <% i += 1  %>
-    <% end %>
-  </div>
-  <div class="span6">
-    <% 10.times do %>
-        <%= render 'clan', i: i %>
-        <% i += 1  %>
-    <% end %>
-  </div>
-</div>
+  <% end %>
+  </tbody>
+</table>
