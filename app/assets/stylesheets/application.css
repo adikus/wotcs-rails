@@ -13,5 +13,5 @@
  *= require navs
  *= require ads
  *= require home
- *= require clans
+ *= require_tree ./pages
  */

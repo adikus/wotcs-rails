@@ -11,7 +11,10 @@
 </head>
 <body>
 <div id="wrap">
-    <%= render 'nav' %>
+  <script>
+      cfg = <%= raw(@js.to_json) %>;
+  </script>
+  <%= render 'nav' %>
 
   <div class="container">
     <%= yield %>

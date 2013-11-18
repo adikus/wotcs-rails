@@ -17,7 +17,7 @@
       </tr>
       </thead>
       <tbody>
-      <% i = 1 %>
+      <% i = @clans.offset + 1 %>
       <% @clans.each do |clan| %>
           <%= render clan, i: i %>
           <% i += 1  %>

@@ -1,2 +1,26 @@
-<%= @clan.inspect %>
-<%= @players.inspect %>
+<%= render 'clan_top', active: 'clans' %>
+<div id="clan_content">
+  <div id="clan_description" class="pull-left">
+    <h2>Description</h2>
+    <%= @clan.description_html %>
+  </div>
+  <div class="rest">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Battles</th>
+        <th>WR</th>
+        <th>SC3</th>
+        <th>WN7</th>
+        <th>EFR</th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render @players %>
+      </tbody>
+    </table>
+  </div>
+</div>
+

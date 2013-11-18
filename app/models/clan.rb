@@ -28,8 +28,12 @@ class Clan < ActiveRecord::Base
     return 'worldoftanks.ru'
   end
 
-  def emblem
-    "http://clans.#{self.domain}/media/clans/emblems/clans_#{self.id.to_s[0]}/#{self.id}/emblem_32x32.png"
+  def emblem(size = 32)
+    "http://clans.#{self.domain}/media/clans/emblems/clans_#{self.id.to_s[0]}/#{self.id}/emblem_#{size}x#{size}.png"
+  end
+
+  def description_html
+    self.description.gsub( /"(.*?)":(.*?)(\s|<\/p>)/, '<a href="\2">\1</a>\3').html_safe
   end
 
 end

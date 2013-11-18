@@ -1,5 +1,5 @@
 class Player < ActiveRecord::Base
-  default_scope { where('status > -1') }
+  default_scope { where('status > -1').order(name: :asc) }
 
   belongs_to :clan
 

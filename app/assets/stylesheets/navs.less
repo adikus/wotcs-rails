@@ -38,7 +38,11 @@ nav.navbar {
       outline: none;
       transition: background 0.5s, color 0.5s;
     }
-    .active a, a:hover, .active a:hover, .active a:focus{
+    .active a, .active a:hover, .active a:focus {
+      background: @active-background;
+      color: #FFFFFF;
+    }
+    a:hover {
       color: @content-color-highlight;
       background: @content-background-highlight;
     }
@@ -55,12 +59,22 @@ nav.navbar {
       border-width: 0 1px 1px 0;
       transition: width 1s;
       .search-handle {
+        position: absolute;
+        right: 0;
         height: 35px;
-        width: 35px;
+        width: 38px;
         cursor: pointer;
+        border-style: solid;
+        border-color: @content-background-highlight;
+        border-width: 0 0 0 1px;
+        border-bottom-right-radius: 4px;
+        transition: background 1s;
+        &:hover {
+          background-color: @content-background-highlight;
+        }
         .glyphicon {
           top: auto;
-          right: 14px;
+          right: 12px;
           bottom: 12px;
           position: absolute;
         }
@@ -68,8 +82,8 @@ nav.navbar {
       .dropdown {
         .btn {
           border-radius: 0;
-          height: 36px;
-          margin-top: -1px;
+          height: 35px;
+          border-top-width: 0;
         }
       }
       form {
@@ -87,7 +101,7 @@ nav.navbar {
         }
       }
       &.open {
-        width: 315px;
+        width: 290px;
         form {
           width: 225px;
           padding: 2px 5px;

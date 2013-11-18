@@ -110,7 +110,6 @@ a {
 }
 
 h1, h2, h3, h4, h5{
-  text-align: center;
   font-family: inherit;
 }
 
@@ -143,4 +142,22 @@ h1, h2, h3, h4, h5{
       transition: background-color 0.5s;
     }
   }
+}
+
+a.list-group-item {
+  color: @content-color;
+  background: @content-background;
+  border-color: @content-background-highlight;
+  transition: background-color 0.5s;
+  &:hover, &:focus {
+    text-decoration: none;
+    background: @content-background-highlight;
+    border-color: @content-background-highlight;
+    color: @content-color-highlight;
+    transition: background-color 0.5s;
+  }
+}
+
+.rest {
+  overflow: hidden;
 }

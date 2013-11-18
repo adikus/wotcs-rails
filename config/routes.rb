@@ -4,7 +4,10 @@ WoTcs::Application.routes.draw do
 
   get '/search' => 'static_pages#search'
 
-  resources :clans
+  resources :clans, only: [:index, :show] do
+    get 'changes', on: :member
+  end
+  resources :players, only: [:index, :show]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
