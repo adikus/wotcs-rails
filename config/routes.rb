@@ -7,7 +7,9 @@ WoTcs::Application.routes.draw do
   resources :clans, only: [:index, :show] do
     get 'changes', on: :member
   end
-  resources :players, only: [:index, :show]
+  resources :players, only: [:index, :show] do
+    get 'changes', on: :member
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

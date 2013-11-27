@@ -19,55 +19,23 @@
   }
 }
 
-#clan_top {
-  position: relative;
-}
-
-#clan_main_menu {
-  width: 250px;
-  margin-top: 30px;
-  z-index: 9;
-  position: relative;
-}
-
-#clan_summary {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 315px 30px 265px;
-  img {
-    margin-left: 15px;
+.clan-page {
+  .content {
+    margin-top: 15px;
+    .description {
+      font-weight: 300;
+      width: 250px;
+      font-size: 0.9em;
+    }
   }
-  h1 {
-    padding-right: 15px;
-  }
-  strong {
-    display: inline-block;
-    margin: 15px 0;
-  }
-}
-#clan_name {
-  margin-top: 20px;
-  font-size: 1.5em;
-}
-
-#clan_content {
-  margin-top: 15px;
-}
-#clan_description {
-  font-weight: 300;
-  width: 250px;
-  font-size: 0.9em;
 }
 
 #clan_member_changes_wrapper {
   margin: 15px -15px;
-  overflow-x: scroll;
+  overflow-x: hidden;
 }
 #clan_member_changes {
   height: 400px;
-  background: @content-background;
   background-image: image-url('double-line.png');
   background-repeat: repeat-x;
   background-position: 50%;

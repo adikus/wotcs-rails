@@ -30,8 +30,8 @@ nav.navbar {
       border-width: 0 0 1px 0;
     }
   }
-  .navbar-collapse {
-    height: 80px;
+  .navbar-menu {
+    height: 85px;
     position: relative;
     a, .active a, a:hover, a:focus{
       color: @content-color;
@@ -48,7 +48,6 @@ nav.navbar {
     }
     .nav-search {
       height: 35px;
-      width: 90px;
       position: absolute;
       bottom: 0;
       border-bottom-right-radius: 4px;
@@ -57,55 +56,30 @@ nav.navbar {
       border-style: solid;
       border-color: @content-background-highlight;
       border-width: 0 1px 1px 0;
-      transition: width 1s;
-      .search-handle {
-        position: absolute;
-        right: 0;
+      form {
         height: 35px;
-        width: 38px;
-        cursor: pointer;
-        border-style: solid;
-        border-color: @content-background-highlight;
-        border-width: 0 0 0 1px;
-        border-bottom-right-radius: 4px;
-        transition: background 1s;
-        &:hover {
-          background-color: @content-background-highlight;
+        padding: 0;
+        margin: 0;
+        .form-group {
+          display: inline-block;
+          margin: 0 10px;
+          input {
+            margin-top: -1px;
+          }
         }
-        .glyphicon {
-          top: auto;
-          right: 12px;
-          bottom: 12px;
-          position: absolute;
-        }
-      }
-      .dropdown {
         .btn {
           border-radius: 0;
+          border-width: 0 1px;
+          height: 34px;
+        }
+        .dropdown {
+          width: 58px;
+        }
+        button.btn {
           height: 35px;
-          border-top-width: 0;
-        }
-      }
-      form {
-        width: 0;
-        height: 36px;
-        transition: width .75s, padding .75s;
-        overflow: hidden;
-        padding: 2px 0;
-        margin: 0;
-        input, button {
-          margin-bottom: 5px;
-        }
-        input:focus {
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 3px rgba(102, 175, 233, 0.6);
-        }
-      }
-      &.open {
-        width: 290px;
-        form {
-          width: 225px;
-          padding: 2px 5px;
-          transition: width 1.5s, padding 1.5s;
+          margin-right: -1px;
+          border-width: 0 1px 1px;
+          border-bottom-right-radius: 4px;
         }
       }
     }

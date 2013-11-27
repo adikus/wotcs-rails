@@ -1,0 +1,19 @@
+<div class="row top-element">
+  <div class="ad-300-250"></div>
+  <div class="rest">
+
+    <div class="list-group pull-left context-menu">
+      <%= link_to 'Statistics', @player, class: 'list-group-item'+(active=='stats' ? ' active' : '') %>
+      <%= link_to 'Tanks', @player, class: 'list-group-item' %>
+      <%= link_to 'Clan changes', [:changes, @player], class: 'list-group-item'+(active=='changes' ? ' active' : '') %>
+    </div>
+
+    <div class="text-center summary">
+      <%= link_to @clan do %>
+        <%= image_tag @clan.emblem(64) %>
+        <h1>[<%= @clan.tag %>]</h1><br>
+      <% end %>
+      <span><%= @player.name %></span>
+    </div>
+  </div>
+</div>

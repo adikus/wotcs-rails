@@ -1,0 +1,25 @@
+<%= will_paginate clans, renderer: BootstrapPagination::Rails, inner_window: 3  %>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Emblem</th>
+    <th>Tag</th>
+    <th>Name</th>
+    <th>WR</th>
+    <th>SC3</th>
+    <th>WN7</th>
+    <th>EFR</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% i = clans.offset + 1 %>
+  <% clans.each do |clan| %>
+      <%= render clan, i: i %>
+      <% i += 1  %>
+  <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate clans, renderer: BootstrapPagination::Rails, inner_window: 3  %>

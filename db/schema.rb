@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131029145119) do
+ActiveRecord::Schema.define(version: 20131127145012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,29 @@ ActiveRecord::Schema.define(version: 20131029145119) do
     t.datetime "updated_at"
   end
 
+  create_table "player_stats", force: true do |t|
+    t.float    "battles"
+    t.float    "wins"
+    t.float    "defeats"
+    t.float    "survived"
+    t.float    "frags"
+    t.float    "spotted"
+    t.float    "accuracy"
+    t.float    "damage"
+    t.float    "capture"
+    t.float    "defence"
+    t.float    "experience"
+    t.float    "wn7"
+    t.float    "wn8"
+    t.float    "efficiency"
+    t.float    "sc3"
+    t.integer  "stat_type"
+    t.integer  "player_id",    limit: 8
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.float    "average_tier"
+  end
+
   create_table "players", force: true do |t|
     t.string   "name"
     t.integer  "clan_id",    limit: 8
@@ -35,5 +58,10 @@ ActiveRecord::Schema.define(version: 20131029145119) do
   end
 
   add_index "players", ["clan_id"], name: "clan_id_ix", using: :btree
+
+  create_table "test", id: false, force: true do |t|
+    t.integer "id"
+    t.integer "val"
+  end
 
 end

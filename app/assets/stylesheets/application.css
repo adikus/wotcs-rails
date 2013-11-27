@@ -12,6 +12,5 @@
  *= require layout
  *= require navs
  *= require ads
- *= require home
  *= require_tree ./pages
  */

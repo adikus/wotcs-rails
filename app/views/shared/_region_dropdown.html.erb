@@ -1,0 +1,14 @@
+<span class="js-region dropdown <%= defined?(class_name) ? class_name : '' %>">
+    <a class="dropdown-toggle btn" data-toggle="dropdown" href="#">
+      <span class="value"><%= current_region_translated %></span> <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu" role="menu">
+      <% all_regions.each do |region| %>
+        <li <%= current_region==region ? ' class="active"'.html_safe : '' %>>
+          <a href="?region=<%= region %>" data-region="<%= region %>">
+            <%= all_regions_translated[region] %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+</span>

@@ -1,7 +1,7 @@
 class ClansController < ApplicationController
 
   def index
-    @clans = Clan.in_region(1).order(tag: :asc).page(params[:page])
+    @clans = Clan.in_region(current_region).order(tag: :asc).page(params[:page])
     @nav_item = 'clans'
   end
 

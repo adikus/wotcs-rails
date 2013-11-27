@@ -1,21 +1,19 @@
-<div class="row" id="clan_top">
+<div class="row top-element">
   <div class="ad-300-250"></div>
   <div class="rest">
 
-    <div class="list-group pull-left" id="clan_main_menu">
-      <%= link_to 'Summary', @clan, class: 'list-group-item'+(active=='clans' ? ' active' : '') %>
+    <aside class="list-group pull-left context-menu">
+      <%= link_to 'Summary', @clan, class: 'list-group-item'+(active=='players' ? ' active' : '') %>
       <%= link_to 'Statistics', @clan, class: 'list-group-item' %>
       <%= link_to 'Tanks', @clan, class: 'list-group-item' %>
       <%= link_to 'Member changes', [:changes, @clan], class: 'list-group-item'+(active=='changes' ? ' active' : '') %>
       <%= link_to 'Clan wars', @clan, class: 'list-group-item' %>
-    </div>
+    </aside>
 
-    <div id="clan_summary">
-      <div class="row">
-        <%= image_tag @clan.emblem(64), class: 'pull-left' %>
-        <h1 class="pull-left"> [<%= @clan.tag %>]</h1>
-        <div id="clan_name"><%= @clan.name %></div>
-      </div>
+    <div class="text-center summary">
+      <%= image_tag @clan.emblem(64) %>
+      <h1>[<%= @clan.tag %>]</h1><br>
+      <span><%= @clan.name %></span><br>
       <strong><%= @clan.motto %></strong>
     </div>
   </div>
