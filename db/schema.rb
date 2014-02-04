@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131127145012) do
+ActiveRecord::Schema.define(version: 20140204135336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "changes", force: true do |t|
+    t.integer  "clan_id",        limit: 8
+    t.integer  "player_id",      limit: 8
+    t.boolean  "joined"
+    t.datetime "changed_at"
+    t.datetime "changed_at_max"
+  end
 
   create_table "clans", force: true do |t|
     t.text     "description"
