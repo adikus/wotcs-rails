@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204135336) do
+ActiveRecord::Schema.define(version: 20140205022648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 20140204135336) do
     t.datetime "changed_at"
     t.datetime "changed_at_max"
   end
+
+  add_index "changes", ["clan_id"], name: "clan_id_changes_ix", using: :btree
+  add_index "changes", ["player_id"], name: "player_id_ix", using: :btree
 
   create_table "clans", force: true do |t|
     t.text     "description"
